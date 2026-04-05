@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Campus Communities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <path d="M12 1a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"></path>
+                    <path d="M8 19a6 6 0 0 1 8 0"></path>
+                </svg>
+                <span>CampusConnect</span>
+            </div>
+            <nav class="navbar-menu">
+                <a href="#" class="nav-link">
+                    <span class="icon">🏠</span> Home
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="icon">🔍</span> Search
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="icon">👤</span> Login
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Feed Section -->
+        <main class="feed-section">
+            <!-- Post Creator -->
+            <div class="post-creator">
+                <textarea id="postInput" placeholder="Share something with your communities..."></textarea>
+                <button id="postBtn" class="post-button">Post</button>
+            </div>
+
+            <!-- Posts Feed -->
+            <div id="postsFeed" class="posts-feed">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Your Communities -->
+            <section class="communities-section">
+                <h2>Your Communities</h2>
+                <div id="communitiesList" class="communities-list">
+                    <!-- Communities will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Trending Topics -->
+            <section class="trending-section">
+                <h2>Trending Topics</h2>
+                <div id="trendingList" class="trending-list">
+                    <!-- Trending topics will be dynamically added here -->
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Page Navigation for Discover Page -->
+    <div id="discoverPage" class="page" style="display: none;">
+        <header class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <path d="M12 1a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"></path>
+                        <path d="M8 19a6 6 0 0 1 8 0"></path>
+                    </svg>
+                    <span>CampusConnect</span>
+                </div>
+                <nav class="navbar-menu">
+                    <a href="#" class="nav-link">
+                        <span class="icon">🏠</span> Home
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="icon">🔍</span> Search
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="icon">👤</span> Login
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="discover-container">
+            <div class="discover-header">
+                <h1>Discover Communities & Topics</h1>
+            </div>
+
+            <div class="discover-search">
+                <input type="text" id="discoverSearch" placeholder="Search for communities, topics, or posts...">
+            </div>
+
+            <div class="discover-tabs">
+                <button class="tab-button active" data-tab="communities">Communities</button>
+                <button class="tab-button" data-tab="posts">Posts</button>
+            </div>
+
+            <div id="discoverContent" class="discover-content">
+                <!-- Communities grid will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
