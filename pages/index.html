@@ -3,117 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusConnect - Campus Communities</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ClassSync | College Social</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <circle cx="12" cy="12" r="1"></circle>
-                    <path d="M12 1a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"></path>
-                    <path d="M8 19a6 6 0 0 1 8 0"></path>
-                </svg>
-                <span>CampusConnect</span>
-            </div>
-            <nav class="navbar-menu">
-                <a href="#" class="nav-link">
-                    <span class="icon">🏠</span> Home
-                </a>
-                <a href="#" class="nav-link">
-                    <span class="icon">🔍</span> Search
-                </a>
-                <a href="#" class="nav-link">
-                    <span class="icon">👤</span> Login
-                </a>
+    <div class="bg-orb bg-orb-left" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-right" aria-hidden="true"></div>
+
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <a class="brand" href="./index.html" aria-label="ClassSync home">
+                <span class="brand-mark">C</span>
+                <span class="brand-word">ClassSync</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="./index.html" class="nav-pill active">Home</a>
+                <a href="./login.html" class="nav-pill">Login</a>
+                <a href="./profile-customization.html" class="nav-pill">Profile Customization</a>
+                <a href="./explore.html" class="nav-pill">Explore</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Feed Section -->
-        <main class="feed-section">
-            <!-- Post Creator -->
-            <div class="post-creator">
-                <textarea id="postInput" placeholder="Share something with your communities..."></textarea>
-                <button id="postBtn" class="post-button">Post</button>
-            </div>
-
-            <!-- Posts Feed -->
-            <div id="postsFeed" class="posts-feed">
-                <!-- Posts will be dynamically added here -->
-            </div>
-        </main>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- Your Communities -->
-            <section class="communities-section">
-                <h2>Your Communities</h2>
-                <div id="communitiesList" class="communities-list">
-                    <!-- Communities will be dynamically added here -->
+    <main class="home-grid">
+        <aside class="left-rail">
+            <h1>Built for campus voices.</h1>
+            <p>
+                ClassSync is your college social stream for clubs, classes, and friend groups.
+                Follow conversations happening right now.
+            </p>
+            <div class="rail-stats">
+                <div>
+                    <p class="stat-value">92K+</p>
+                    <p class="stat-label">Students connected</p>
                 </div>
+                <div>
+                    <p class="stat-value">310+</p>
+                    <p class="stat-label">Campus communities</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="feed-shell" aria-label="Home feed preview">
+            <div class="composer">
+                <div class="avatar">YS</div>
+                <div class="composer-content">
+                    <textarea id="postInput" maxlength="280" placeholder="What are students talking about today?"></textarea>
+                    <div class="composer-row">
+                        <p id="charCounter">280</p>
+                        <button id="postBtn" type="button">Post</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="postsFeed" class="posts-feed"></div>
+        </section>
+
+        <aside class="right-rail">
+            <section class="panel">
+                <h2>Explore Preview</h2>
+                <p>This page will later include search for communities, posts, and profiles.</p>
+                <div class="chip-list" id="topicsList"></div>
             </section>
 
-            <!-- Trending Topics -->
-            <section class="trending-section">
-                <h2>Trending Topics</h2>
-                <div id="trendingList" class="trending-list">
-                    <!-- Trending topics will be dynamically added here -->
-                </div>
+            <section class="panel">
+                <h2>Campus Pulse</h2>
+                <ul id="pulseList" class="pulse-list"></ul>
             </section>
         </aside>
-    </div>
+    </main>
 
-    <!-- Page Navigation for Discover Page -->
-    <div id="discoverPage" class="page" style="display: none;">
-        <header class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-logo">
-                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="1"></circle>
-                        <path d="M12 1a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"></path>
-                        <path d="M8 19a6 6 0 0 1 8 0"></path>
-                    </svg>
-                    <span>CampusConnect</span>
-                </div>
-                <nav class="navbar-menu">
-                    <a href="#" class="nav-link">
-                        <span class="icon">🏠</span> Home
-                    </a>
-                    <a href="#" class="nav-link">
-                        <span class="icon">🔍</span> Search
-                    </a>
-                    <a href="#" class="nav-link">
-                        <span class="icon">👤</span> Login
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <div class="discover-container">
-            <div class="discover-header">
-                <h1>Discover Communities & Topics</h1>
-            </div>
-
-            <div class="discover-search">
-                <input type="text" id="discoverSearch" placeholder="Search for communities, topics, or posts...">
-            </div>
-
-            <div class="discover-tabs">
-                <button class="tab-button active" data-tab="communities">Communities</button>
-                <button class="tab-button" data-tab="posts">Posts</button>
-            </div>
-
-            <div id="discoverContent" class="discover-content">
-                <!-- Communities grid will be displayed here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
