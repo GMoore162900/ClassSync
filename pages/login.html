@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ClassSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="bg-orb bg-orb-left" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-right" aria-hidden="true"></div>
+
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <a class="brand" href="./index.html" aria-label="ClassSync home">
+                <span class="brand-mark">C</span>
+                <span class="brand-word">ClassSync</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="./index.html" class="nav-pill">Home</a>
+                <a href="./login.html" class="nav-pill active">Login</a>
+                <a href="./profile-customization.html" class="nav-pill">Profile Customization</a>
+                <a href="./explore.html" class="nav-pill">Explore</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Welcome Back</h1>
+            <p>Sign in to your ClassSync account</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email or Username</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script src="../scripts/login.js"></script>
+</body>
+</html>
