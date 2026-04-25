@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - ClassSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="bg-orb bg-orb-left" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-right" aria-hidden="true"></div>
+
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <a class="brand" href="./index.html" aria-label="ClassSync home">
+                <span class="brand-mark">C</span>
+                <span class="brand-word">ClassSync</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="./index.html" class="nav-pill">Home</a>
+                <a href="./login.html" class="nav-pill">Login</a>
+                <a href="./profile-customization.html" class="nav-pill">Profile Customization</a>
+                <a href="./explore.html" class="nav-pill active">Explore</a>
+                <a href="./about-us.html" class="nav-pill">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="explore-page">
+        <section class="explore-shell">
+            <div class="explore-header">
+                <h1>Explore ClassSync</h1>
+                <p>Search profiles, posts, communities, and hashtags.</p>
+            </div>
+
+            <div class="search-wrap">
+                <label class="sr-only" for="exploreSearch">Search explore content</label>
+                <input
+                    id="exploreSearch"
+                    type="text"
+                    placeholder="Search profiles, posts, communities, hashtags"
+                    autocomplete="off"
+                >
+            </div>
+
+            <section class="results-panel">
+                <h2>Search Results</h2>
+                <p id="searchSummary" class="results-summary">Type in the search bar to find matching content.</p>
+
+                <div class="results-columns">
+                    <article class="result-card">
+                        <h3>Profiles</h3>
+                        <div id="profileResults" class="result-list"></div>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>Posts</h3>
+                        <div id="postResults" class="result-list"></div>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>Communities</h3>
+                        <div id="communityResults" class="result-list"></div>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>Hashtags</h3>
+                        <div id="hashtagResults" class="result-list"></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="results-panel">
+                <h2>Recommended For You</h2>
+
+                <div class="results-columns recommendations">
+                    <article class="result-card">
+                        <h3>Relevant Posts</h3>
+                        <div id="recommendedPosts" class="result-list"></div>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>Relevant Communities</h3>
+                        <div id="recommendedCommunities" class="result-list"></div>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>Trending Hashtags</h3>
+                        <div id="recommendedHashtags" class="result-list"></div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="../scripts/explore.js"></script>
+</body>
+</html>
